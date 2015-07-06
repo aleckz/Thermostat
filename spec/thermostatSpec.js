@@ -67,7 +67,7 @@ describe('Thermostat', function() {
 	describe('reset button', function() {
 		it('can be reset to 20 by hitting the reset button', function() {
 			thermostat.temperature = 25;
-			thermostat.reset;
+			thermostat.reset();
 			expect(thermostat.temperature).toEqual(20);
 		});
 	});
