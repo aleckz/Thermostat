@@ -7,6 +7,7 @@ changeDisplay();
 function changeDisplay() {
   document.getElementById("temperature").innerHTML=thermostat.showTemp();
   document.getElementById("temperature").style.color = thermostat.color();
+  document.getElementById("bg").style.backgroundImage = thermostat.pic();
 }
 
 document.getElementById("up").onclick = function() {

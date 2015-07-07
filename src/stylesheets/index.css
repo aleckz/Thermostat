@@ -2,6 +2,7 @@ body {
   background-color: #000000;
   font-family: ComicSansMs;
   color: #FFFFFF;
+  /*background: url('http://www.clipartbest.com/cliparts/Kcj/e9B/Kcje9BRKi.gif');*/
 }
 
 h1 {
@@ -31,4 +32,9 @@ p {
   width: 60%;
   border: 3px solid #FF3399;
   padding: 10px;
+  background-color: #000000;
+}
+
+#power-save {
+  text-align: center;
 }
