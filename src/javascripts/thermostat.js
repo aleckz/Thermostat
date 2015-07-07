@@ -11,7 +11,7 @@ Thermostat.prototype.increase = function() {
 	if ((this.powerSaver && this.temperature < 25) 
 		|| (!this.powerSaver && this.temperature < 32)){
 			this.temperature += 1;
-	}  
+	}
 };
 
 Thermostat.prototype.decrease = function () {
