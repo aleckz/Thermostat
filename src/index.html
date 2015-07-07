@@ -6,13 +6,21 @@
 
 <h1>Thermostat</h1>
 
-<p id="greeting"></p>
+<p id="greeting">  </p>
 
-<p id="temperature"></p>
+<p id="temperature">   </p>
 
+<!-- <button id="upButton">up</button> -->
 
+<button id='up' onClick='increaseTemp()'>Up</button>
 
-<button id='up' onClick='incTemp()'>Up</button>
+<button id='down' onClick='decreaseTemp()'>Down</button>
+
+<button id='reset' onClick='resetTemp()'>Reset</button>
+
+<form>
+  <p>Power Saver<input type="checkbox" checked="true" name="powerSaving" onClick="powerSaver()"></p>
+</form>
 
 <script src="javascripts/webapp.js"></script>
 
