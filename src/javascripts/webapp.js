@@ -4,28 +4,21 @@ var thermostat = new Thermostat();
 
 document.getElementById("temperature").innerHTML=thermostat.showTemp();
 
-function increaseTemp() {
+document.getElementById("up").onclick = function() {
   thermostat.increase();
   document.getElementById("temperature").innerHTML=thermostat.showTemp();
 };
 
-function decreaseTemp() {
+document.getElementById("down").onclick = function() {
 	thermostat.decrease();
 	document.getElementById("temperature").innerHTML=thermostat.showTemp();
 };
 
-function resetTemp() {
+document.getElementById("reset").onclick = function() {
 	thermostat.reset();
 	document.getElementById("temperature").innerHTML=thermostat.showTemp();
 };
 
-function powerSaver() {
+document.getElementById("powerSaving").onclick = function() {
 	thermostat.powerSavingToggle();
 };
-
-// var up = document.getElementById("upButton")
-
-// 	up.onClick = function() {
-// 		thermostat.increase();
-// 		document.getElementById("temperature").innerHTML=thermostat.showTemp();
-// 	}
