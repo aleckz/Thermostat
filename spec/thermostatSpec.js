@@ -5,8 +5,9 @@
 // -If power saving mode is on, the maximum temperature is 25 degrees
 // -If power saving mode is off, the maximum temperature is 32 degrees
 // -Power saving mode is on by default
-// You can reset the temperature to 20 by hitting the reset button
-// The thermostat should colour the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
+// -You can reset the temperature to 20 by hitting the reset button
+// The thermostat should colour the display based on energy usage 
+// - < 18 is green, < 25 is yellow, otherwise red
 
 describe('Thermostat', function() {
 	var thermostat;
@@ -45,9 +46,10 @@ describe('Thermostat', function() {
 
 	describe('power saving mode on', function() {
 		it('max temperature is 25 degrees', function() {
-			for(i = 0; i < 5; i++){
-				thermostat.increase();
-			};
+			// for(i = 0; i < 5; i++){
+			// 	thermostat.increase();
+			// };
+			thermostat.temperature = 25
 			thermostat.increase();
 			expect(thermostat.temperature).toEqual(25);
 		});
@@ -55,10 +57,11 @@ describe('Thermostat', function() {
 
 	describe('power saving mode off', function() {
 		it('max temperature is 32 degrees', function() {
-			thermostat.powerSavingOff();
-			for(i = 0; i < 12; i++){
-				thermostat.increase();
-			};
+			thermostat.powerSavingToggle();
+			// for(i = 0; i < 12; i++){
+			// 	thermostat.increase();
+			// };
+			thermostat.temperature = 32
 			thermostat.increase();
 			expect(thermostat.temperature).toEqual(32);
 		});
@@ -71,6 +74,13 @@ describe('Thermostat', function() {
 			expect(thermostat.temperature).toEqual(20);
 		});
 	});
+
+	// describe('temperature range', function(){
+	// 	it('less than 18 degrees is green', function(){
+	// 		thermostat.temperature < 18
+	// 		expect(thermostat.color).to
+	// 	});
+	// });
 
 
 });

@@ -4,13 +4,10 @@ var Thermostat = function() {
 };
 
 Thermostat.prototype.increase = function() {
-	if (this.powerSaver === true){
-		if (this.temperature < 25) {
+	if ((this.powerSaver && this.temperature < 25) 
+		|| (!this.powerSaver && this.temperature < 32)){
 			this.temperature += 1;
-		};
-	} else if (this.temperature < 32) { 
-		this.temperature += 1;
-	};
+	}  
 };
 
 Thermostat.prototype.decrease = function () {
@@ -19,8 +16,8 @@ Thermostat.prototype.decrease = function () {
 	};
 };
 
-Thermostat.prototype.powerSavingOff = function () {
-	this.powerSaver = false;
+Thermostat.prototype.powerSavingToggle = function () {
+	this.powerSaver = !this.powerSaver;
 };
 
 Thermostat.prototype.reset = function() {
