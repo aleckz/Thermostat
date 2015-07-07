@@ -6,22 +6,25 @@
 
 <script src="javascripts/thermostat.js"></script>
 
-<h1>Thermostat</h1>
+<div class="container">
+  <h1>Thermostat</h1>
 
-<p id="greeting">  </p>
+  <p id="greeting"> Hail, rain, sleet or snow. <br>The thermostat cares where you go. <br>Set the temperature, take a break.<br> All is well upon your wake. </p>
 
-<p id="temperature">   </p>
+  <p id="temp-display"><span id="temperature"></span>&deg;C</p>
 
-<button id='up'>Up</button>
+<div class="buttons">
+  <button id='up'>Up</button>
 
-<button id='down'>Down</button>
+  <button id='down'>Down</button>
 
-<button id='reset'>Reset</button>
+  <button id='reset'>Reset</button>
+</div>
 
-<form>
-  <p>Power Saver<input type="checkbox" checked="checked" id="powerSaving"></p>
-</form>
-
+  <form>
+    <p>Power Saver<input type="checkbox" checked="checked" id="powerSaving"></p>
+  </form>
+</div>
 <script src="javascripts/webapp.js"></script>
 
 </body>

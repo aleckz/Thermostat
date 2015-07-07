@@ -1,22 +1,27 @@
-document.getElementById("greeting").innerHTML = "Hail, rain, sleet or snow. The thermostat cares not where you go. Set the temperature, take a break. All will be well upon your wake.";
+// document.getElementById("greeting").innerHTML = "Hail, rain, sleet or snow. The thermostat cares where you go. Set the temperature, take a break. All is well upon your wake.";
 
 var thermostat = new Thermostat();
 
-document.getElementById("temperature").innerHTML=thermostat.showTemp();
+changeDisplay();
+
+function changeDisplay() {
+  document.getElementById("temperature").innerHTML=thermostat.showTemp();
+  document.getElementById("temperature").style.color = thermostat.color();
+}
 
 document.getElementById("up").onclick = function() {
   thermostat.increase();
-  document.getElementById("temperature").innerHTML=thermostat.showTemp();
+  changeDisplay();
 };
 
 document.getElementById("down").onclick = function() {
 	thermostat.decrease();
-	document.getElementById("temperature").innerHTML=thermostat.showTemp();
+	changeDisplay();
 };
 
 document.getElementById("reset").onclick = function() {
 	thermostat.reset();
-	document.getElementById("temperature").innerHTML=thermostat.showTemp();
+	changeDisplay();
 };
 
 document.getElementById("powerSaving").onclick = function() {
