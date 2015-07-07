@@ -3,6 +3,10 @@ var Thermostat = function() {
 	this.powerSaver = true;
 };
 
+Thermostat.prototype.showTemp = function() {
+  return this.temperature;
+};
+
 Thermostat.prototype.increase = function() {
 	if ((this.powerSaver && this.temperature < 25) 
 		|| (!this.powerSaver && this.temperature < 32)){

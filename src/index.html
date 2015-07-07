@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script src="javascripts/thermostat.js"></script>
+<script src="javascripts/app.js"></script>
+
+<h1>Thermostat</h1>
+
+<p id="greeting"></p>
+
+<p id="temperature"></p>
+
+<button onclick="getElementById('thermostat').innerHTML=thermostat.temperature">Increase</button>
+
+<button onclick="getElementById('thermostat').innerHTML=thermostat.temperature">Decrease</button>
+
+<script>
+document.getElementById("greeting").innerHTML = "Hail, rain, sleet or snow. The thermostat cares not where you go. Set the temperature, take a break. All will be well upon your wake.";
+
+var thermostat = new Thermostat();
+
+document.getElementById("temperature").innerHTML=thermostat.showTemp();
+</script>
+</body>
+</html>
