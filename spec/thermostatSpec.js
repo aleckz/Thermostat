@@ -82,5 +82,18 @@ describe('Thermostat', function() {
 		});
 	});
 
+	describe('temperature range', function(){
+		it('less than 25 degrees is yellow', function(){
+			thermostat.temperature = 24;
+			expect(thermostat.color()).toBe("yellow");
+		});
+	});
+
+	describe('temperature range', function(){
+		it('greater than or equal to 25 degrees is red', function(){
+			thermostat.temperature = 25;
+			expect(thermostat.color()).toBe("red");
+		});
+	});
 
 });
