@@ -1,6 +1,4 @@
-// replace .onclick with click if possible
-
-function tempDisplay(){
+gfunction tempDisplay(){
 	$("#temperature").text(thermostat.showTemp());
 	$("#temperature").css("color", thermostat.color());
 };
@@ -11,22 +9,22 @@ $(document).ready(function(){
 
 var thermostat = new Thermostat;
 
-$("#up").on("click",function(){
+$("#up").click(function(){
 	thermostat.increase();
 	tempDisplay();
 });
 
-$("#down").on("click",function(){
+$("#down").click(function(){
 	thermostat.decrease();
 	tempDisplay();
 });
 
-$("#reset").on("click",function(){
+$("#reset").click(function(){
 		thermostat.reset();
 		tempDisplay();
 });
 
-$("#powerSaving").on("click",function(){
+$("#powerSaving").click(function(){
 	thermostat.powerSavingToggle();
 	$("#temperature").text(thermostat.showTemp());
 });
