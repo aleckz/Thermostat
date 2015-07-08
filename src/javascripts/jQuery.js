@@ -30,7 +30,10 @@ $("#powerSaving").click(function(){
 	$("#temperature").text(thermostat.showTemp());
 });
 
-// $.getJSON(url['api.openweathermap.org/data/2.5/weather?q=London'], function(data) {
-	
-// });
-
+$.getJSON('http://api.openweathermap.org/data/2.5/find?q=London&units=metric',
+ {},
+ function (response) {
+ 	 var data = response.list[0].main.temp;
+ 	 $("#api").prepend(data);
+ 	 // prepend or append or text... fack
+ });
