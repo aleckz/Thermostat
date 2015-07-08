@@ -72,9 +72,9 @@ describe('Thermostat', function() {
 	});
 
 	describe('temperature range', function(){
-		it('less than 25 degrees is yellow', function(){
+		it('less than 25 degrees is orange', function(){
 			thermostat.temperature = 24;
-			expect(thermostat.color()).toBe("yellow");
+			expect(thermostat.color()).toBe("orange");
 		});
 	});
 

@@ -28,3 +28,11 @@ document.getElementById("reset").onclick = function() {
 document.getElementById("powerSaving").onclick = function() {
 	thermostat.powerSavingToggle();
 };
+
+// var button = document.getElementById('button')
+
+// button.onclick = function() {console.log('Click!')}
+
+// button.addEventListener('click', function{
+// 	console.log('Ive been clicked!')
+// })
