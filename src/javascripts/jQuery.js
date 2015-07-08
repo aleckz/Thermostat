@@ -1,6 +1,7 @@
-gfunction tempDisplay(){
+function tempDisplay(){
 	$("#temperature").text(thermostat.showTemp());
 	$("#temperature").css("color", thermostat.color());
+	$("#bg").css("background", thermostat.pic());
 };
 
 $(document).ready(function(){
@@ -29,6 +30,7 @@ $("#powerSaving").click(function(){
 	$("#temperature").text(thermostat.showTemp());
 });
 
-
-
+// $.getJSON(url['api.openweathermap.org/data/2.5/weather?q=London'], function(data) {
+	
+// });
 
