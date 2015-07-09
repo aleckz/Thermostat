@@ -30,14 +30,13 @@ $("#powerSaving").click(function(){
 	$("#temperature").text(thermostat.showTemp());
 });
 
-
 $("#city-name").click(function(){
 	var city = $("#searchform").val();
 	var apiRequest= 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric';
-
+	
 	$.getJSON(apiRequest, function (response) {
-	var data = response.main.temp;
- 	 $("#api").html(Math.round(data) + '&deg;C');
+	var temperature = response.main.temp;
+ 	 $("#api").html(Math.round(temperature) + '&deg;C');
  });
 });
 
