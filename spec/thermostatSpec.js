@@ -67,14 +67,14 @@ describe('Thermostat', function() {
 	describe('temperature range', function(){
 		it('less than 18 degrees is green', function(){
 			thermostat.temperature = 17;
-			expect(thermostat.color()).toBe("green");
+			expect(thermostat.color()).toBe("#00FF00");
 		});
 	});
 
 	describe('temperature range', function(){
 		it('less than 25 degrees is orange', function(){
 			thermostat.temperature = 24;
-			expect(thermostat.color()).toBe("orange");
+			expect(thermostat.color()).toBe("#FF9900");
 		});
 	});
 

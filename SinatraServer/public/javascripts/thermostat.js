@@ -10,20 +10,19 @@ Thermostat.prototype.showTemp = function() {
 Thermostat.prototype.increase = function() {
 	if ((this.powerSaver && this.temperature < 25) 
 		|| (!this.powerSaver && this.temperature < 32)){
-			this.temperature += 1;
+			this.temperature ++;
 	}
 };
 
 Thermostat.prototype.decrease = function () {
 	if (this.temperature > 10) {
-		this.temperature -= 1;
+		this.temperature --;
 	};
 };
 
 Thermostat.prototype.powerSavingToggle = function () {
 	this.powerSaver = !this.powerSaver;
 };
-
 Thermostat.prototype.reset = function() {
 	this.temperature = 20;
 };

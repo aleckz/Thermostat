@@ -30,10 +30,18 @@ $("#powerSaving").click(function(){
 	$("#temperature").text(thermostat.showTemp());
 });
 
-$.getJSON('http://api.openweathermap.org/data/2.5/find?q=London&units=metric',
- {},
- function (response) {
- 	 var data = response.list[0].main.temp;
- 	 $("#api").prepend(data);
- 	 // prepend or append or text... fack
+
+$("#city-name").click(function(){
+	var city = $("#searchform").val();
+	var apiRequest= 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric';
+
+	$.getJSON(apiRequest, function (response) {
+	var data = response.main.temp;
+ 	 $("#api").html(Math.round(data) + '&deg;C');
  });
+});
+
+// // getJSON takes two arguments, the URL and the 'callback function' that is going to the URL and then executing the contents of the function
+
+
+
