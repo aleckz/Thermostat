@@ -5,19 +5,24 @@ function tempDisplay(){
 };
 
 $(document).ready(function(){
-	tempDisplay();
+	$("#temperature").css("color", thermostat.color());
+	$("#bg").css("background", thermostat.pic());
 })
 
 var thermostat = new Thermostat;
 
+thermostat.temperature = $('#temperature').text()
+
 $("#up").click(function(){
 	thermostat.increase();
 	tempDisplay();
+	$.post( "/", { temperature: thermostat.showTemp() } )
 });
 
 $("#down").click(function(){
 	thermostat.decrease();
 	tempDisplay();
+	$.post( "/", { temperature: thermostat.showTemp() } )
 });
 
 $("#reset").click(function(){

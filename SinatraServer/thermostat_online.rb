@@ -7,10 +7,18 @@ enable :sessions
 set :views, proc {File.join(root,'.', 'views')}
 
   get '/' do
-    session[:id] = @cookie
+    if session[:temperature]
+      @temperature = session[:temperature]
+    else
+      @temperature = 20
+    end
     erb :index
   end
 
+  post '/' do
+    user_temperature = params[:temperature]
+    session[:temperature] = user_temperature
+  end
 
 
 

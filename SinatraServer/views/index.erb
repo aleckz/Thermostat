@@ -12,11 +12,11 @@
 
   <p id="greeting"> Hail, rain, sleet or snow. <br>The thermostat cares where you go. <br>Set the temperature, take a break.<br> All is well upon your wake. </p>
 
-  <p id="temp-display"><span id="temperature"></span>&deg;C</p>
+  <p id="temp-display"><span id="temperature"><%= @temperature %> </span>&deg;C</p>
 
 <div class="buttons">
+  
   <input type="submit" id='up' value="&uarr;"/>
-
   <input type="submit" id='down' value="&darr;"/>
 
   <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwlEFI9QmSb9b-lK7BWDD7NhPEUY3_fMdhabz1Uck5KUofHEGI' width = '100' id='reset'/>
@@ -36,7 +36,7 @@
   </form>
 </div>
 
-<!-- public is a folder taht doesn't need to be referenced, its looked into automatically -->
+<!-- public is a folder that doesn't need to be referenced, its looked into automatically -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="javascripts/jQuery.js"></script>
