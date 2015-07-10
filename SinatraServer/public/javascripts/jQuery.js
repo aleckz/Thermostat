@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	$("#temperature").css("color", thermostat.color());
-	$("#bg").css("background", thermostat.pic());
 })
 
 var thermostat = new Thermostat;
@@ -59,5 +58,4 @@ $("#city-name").click(function(){
 function tempDisplay(){
 	$("#temperature").text(thermostat.showTemp());
 	$("#temperature").css("color", thermostat.color());
-	$("#bg").css("background", thermostat.pic());
 };
