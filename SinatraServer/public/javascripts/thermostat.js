@@ -47,12 +47,12 @@ Thermostat.prototype.color = function() {
   }
 };
 
-Thermostat.prototype.pic = function() {
-  if (this.range() === 'cold') {
-  	return "url('http://www.26pm.com/site/wp-content/uploads/2013/12/2014SnowLarge.gif')";
-  } else if (this.range() === 'warm') {
-  	return "url('http://i.perezhilton.com/wp-content/uploads/2014/03/spring-gifs6.gif')";
-  } else {
-  	return "url('http://www.clipartbest.com/cliparts/Kcj/e9B/Kcje9BRKi.gif')";
-  }
-};
+// Thermostat.prototype.pic = function() {
+//   if (this.range() === 'cold') {
+//   	return "url('http://www.26pm.com/site/wp-content/uploads/2013/12/2014SnowLarge.gif')";
+//   } else if (this.range() === 'warm') {
+//   	return "url('http://i.perezhilton.com/wp-content/uploads/2014/03/spring-gifs6.gif')";
+//   } else {
+//   	return "url('http://www.clipartbest.com/cliparts/Kcj/e9B/Kcje9BRKi.gif')";
+//   }
+// };

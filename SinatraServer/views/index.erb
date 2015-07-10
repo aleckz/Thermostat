@@ -12,7 +12,7 @@
 
   <p id="greeting"> Hail, rain, sleet or snow. <br>The thermostat cares where you go. <br>Set the temperature, take a break.<br> All is well upon your wake. </p>
 
-  <p id="temp-display"><span id="temperature"><%= @temperature %> </span>&deg;C</p>
+  <p id="temp-display"><span id="temperature"><%= @temperature %></span>&deg;C</p>
 
 <div class="buttons">
   
@@ -25,9 +25,10 @@
 
 	What's the temperature?
 
-		<input type="text" id="searchform">
+		<input type="text" id="city-search">
 		<input type="submit" value="Search" id="city-name">
 
+  <!-- p id='city'>The temperature in <span id='existing-city'><%= @city %></span>: </p> -->
 
 	<p id="api"></p>
 
